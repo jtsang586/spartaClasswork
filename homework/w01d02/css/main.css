@@ -58,7 +58,8 @@ a {
   position: absolute;
   margin-left: 880px;
   display: block;
-  background-color: #1c5380;
+  background: #1c5380;
+  background: left-;
   top: 18.5%;
   width: 100px;
   height: 35px;
