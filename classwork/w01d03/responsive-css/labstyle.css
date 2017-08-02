@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+} 
+
+div {
+  /*border: 2px solid black;*/
+  width: 32vw;
+  height: 100vh;
+  display: inline-block;
+  /*margin: -2px -2px -2px -2px;*/
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.black {
+background-color: black;
+}
+
+.yellow {
+  background-color:  yellow;
+}
+
+.red {
+background-color:  red;
+}
+
+@media screen and (max-width: 600px) {
+  div {
+    width: 100vw;
+    height: 33vh;
+    display: inline-block;
+  }
+  .yellow {
+    background-color: red;
+  }
+  .red {
+    background-color: yellow;
+
+  }
+}
+
+
