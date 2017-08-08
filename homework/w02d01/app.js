@@ -4,16 +4,16 @@ function inputs(name, input) {
   if (input == 1){
     alert (name + " picked Rock");
   } else if (input == 2){
-    alert (name + " picked Paper")
+    alert (name + " picked Paper");
   } else if (input == 3){
-    alert (name + " picked Scissors")
+    alert (name + " picked Scissors");
   } else if (input == 4){
-    alert (name + " picked Lizard")
+    alert (name + " picked Lizard");
   } else if (input == 5){
-    alert (name + " picked Spock")
+    alert (name + " picked Spock");
   } else {
-    alert ("Please pick a number from 1 - 5")
-    inputs();
+    alert ("Please pick a number from 1 - 5");
+    main();
   }
   return input;
 }

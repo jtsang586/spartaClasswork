@@ -4,12 +4,20 @@ var paper = 3;
 
 var playerChoice = 0;
 var computerChoise = 0;
+
 var playerScore = 0;
 var computerScore = 0;
 
-for (i = 0; i <= 5; i++)
+for (var i = 0; i < 5; i++)
 {
   playerchoice = prompt("Pick Scissors(1), Rock (2), Paper (3). Type 1, 2 or 3");
+  
+  if (playerchoice < 1 || playerchoice > 3)
+    {
+      alert("Please pick a number from 1-3");
+      i--;
+      break;
+    }  
 
   if (playerchoice == 1)
   {
