@@ -11,50 +11,9 @@ var numberButtons = document.getElementsByClassName("number");
 
 for (var i = 0; i < numberButtons.length; i++){
   var temp = 0;
-  var bigTemp = 0;
   numberButtons[i].addEventListener ("click", function(event) {
-    switch (this.value) {
-      case ("0"):
-        temp = 0;
-        display("0");
-        break;
-      case ("1"): 
-        temp = 1;
-        display("1");
-        break;
-      case ("2"):
-        temp = 2;
-        display("2");
-        break;
-      case ("3"):
-        temp = 3;
-        display("3");
-        break;
-      case ("4"):
-        temp = 4;
-        display("3");
-        break;
-      case ("5"):
-        temp = 5;
-        display("5");
-        break;
-      case ("6"):
-        temp = 6;
-        display("6");
-        break;
-      case ("7"):
-        temp = 7;
-        display("7");
-        break;
-      case ("8"):
-        temp = 8;
-        display("8");
-        break;
-      case ("9"):
-        temp = 9;
-        display("9");
-        break;
-      }
+    temp = parseInt(this.value);
+    display(this.value);
     if (operatorPressed == false){
       if (moreDigits == true) {
         number1 = (number1 * 10) + temp;
@@ -80,24 +39,8 @@ for (var i = 0; i < operatorButtons.length; i++){
   operatorPressed = true;
   moreDigits = false;
   temp = 0;
-    switch (this.value) {
-      case ("+"):
-        opString = "+";
-        display("+")
-        break;
-      case ("-"):
-        opString = "-";
-        display("-");
-        break;
-      case ("/"):
-        opString = "/";
-        display("/");
-        break;
-      case ("x"):
-        opString = "x";
-        display("x");
-        break;
-     }
+  opString = this.value;
+  display(opString);
   })
 }
 
