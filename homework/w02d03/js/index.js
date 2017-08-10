@@ -1,3 +1,4 @@
+$(function(event){
 //Create Noughts and Crosses Game
 //Global variables
 var playerTurn = true;
@@ -31,7 +32,7 @@ $(boxes).each(function(index, box){
     }
     counter++
     console.log(counter);
-    if (counter == 9){
+    if (counter == 9 && ){
       draw();
     }
   })
@@ -84,4 +85,5 @@ function clear (){
     $(box).removeClass("X").removeClass("O").html("");
   })
 }
+})
 //When no player wins

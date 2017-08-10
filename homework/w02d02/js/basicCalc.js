@@ -36,6 +36,9 @@ for (var i = 0; i < numberButtons.length; i++){
 var operatorButtons = document.getElementsByClassName("operator");
 for (var i = 0; i < operatorButtons.length; i++){
   operatorButtons[i].addEventListener ("click", function(event) {
+  if (operatorPressed == true){
+    equals();
+  }
   operatorPressed = true;
   moreDigits = false;
   temp = 0;
@@ -45,11 +48,7 @@ for (var i = 0; i < operatorButtons.length; i++){
 }
 
 var equalsButton = document.getElementsByClassName("eq");
-equalsButton[0].addEventListener("click", function(event) {
-  operatorPressed = false;
-  moreDigits = false;
-  number1 = calculate(number1,number2);
-})
+equalsButton[0].addEventListener("click", equals)
 
 var clearButton = document.getElementsByClassName("clear");
 clearButton[0].addEventListener("click", function(event){
@@ -80,6 +79,12 @@ function calculate(num1, num2){
     display(result);
     return result;
   }
+
+function equals(){
+  operatorPressed = false;
+  moreDigits = false;
+  number1 = calculate(number1,number2);
+}
 
 function display(text){
   document.getElementsByClassName("display")[0].value = text;
