@@ -18,3 +18,7 @@ end
 post '/games' do 
     "CREATE"
 end
+
+get '/games/:id/edit' do
+    "EDIT"
+end
