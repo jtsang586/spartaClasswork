@@ -10,3 +10,11 @@ end
 get'/games/new' do 
     'NEW'
 end
+
+get '/games/:id' do
+    "SHOW"
+end
+
+get '/games/new' do 
+    "NEW"
+end
