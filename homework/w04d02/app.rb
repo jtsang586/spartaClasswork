@@ -22,3 +22,7 @@ end
 get '/games/:id/edit' do
     "EDIT"
 end
+
+put '/games/:id' do 
+    "UPDATE"
+end
