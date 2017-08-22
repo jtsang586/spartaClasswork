@@ -26,3 +26,7 @@ end
 put '/games/:id' do 
     "UPDATE"
 end
+
+delete '/games/:id' do
+    "DELETE"
+end
