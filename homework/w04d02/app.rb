@@ -15,6 +15,6 @@ get '/games/:id' do
     "SHOW"
 end
 
-get '/games/new' do 
-    "NEW"
+post '/games' do 
+    "CREATE"
 end
