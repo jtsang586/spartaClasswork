@@ -2,18 +2,18 @@ class VideosController < Sinatra::Base
 
     $videos = [{
             id: 0,
-            title: 'Monster Hunter World'
-            url:
+            title: 'Monster Hunter World',
+            url: "dsdsa"
         },
         {
             id: 1,
-            title: 'Dragon Ball Fighterz'
-            url:
+            title: 'Dragon Ball Fighterz',
+            url: "dsadas"
         },
         {
             id: 2,
-            title: 'Age of Empire 4'
-            url:
+            title: 'Age of Empire 4',
+            url: "dsadsad"
         }
     ]
 
@@ -27,11 +27,11 @@ class VideosController < Sinatra::Base
 
     get '/' do 
 
-        "index"
+        @title = "Video game video directory"
 
         @videos = $videos
 
-        # erb :'videos/index'
+        erb :'videos/index'
 
     end
 
@@ -39,15 +39,19 @@ class VideosController < Sinatra::Base
 
         "NEW"
 
-        # erb :'videos/new'
+        erb :'videos/new'
 
     end
 
     get '/:id' do 
 
+        id = params[:id].to_i
+
+        @video = $videos[id]
+
         "SHOW"
 
-        # erb :'videos/show'
+        erb :'videos/show'
 
     end
 
