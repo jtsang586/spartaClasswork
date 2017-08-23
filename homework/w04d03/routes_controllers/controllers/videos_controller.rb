@@ -7,8 +7,8 @@ class VideosController < Sinatra::Base
         },
         {
             id: 1,
-            title: 'Dragon Ball Fighterz',
-            url: 'https://www.youtube.com/embed/SXrtRkggS60'
+            title: 'God of War 4',
+            url: 'https://www.youtube.com/embed/gOE2BVRCUkM'
         },
         {
             id: 2,
