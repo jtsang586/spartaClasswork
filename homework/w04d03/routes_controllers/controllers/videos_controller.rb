@@ -3,17 +3,17 @@ class VideosController < Sinatra::Base
     $videos = [{
             id: 0,
             title: 'Monster Hunter World',
-            url: "dsdsa"
+            url: 'https://www.youtube.com/embed/ULqY6yXn2S4'
         },
         {
             id: 1,
             title: 'Dragon Ball Fighterz',
-            url: "dsadas"
+            url: 'https://www.youtube.com/embed/SXrtRkggS60'
         },
         {
             id: 2,
             title: 'Age of Empire 4',
-            url: "dsadsad"
+            url: 'https://www.youtube.com/embed/RYwZ6GZXWhA'
         }
     ]
 
@@ -57,8 +57,20 @@ class VideosController < Sinatra::Base
 
     post '/' do 
 
-        "CREATE"
+        id = $videos.length
 
+        new_video = {
+            id: id,
+            title: params[:title],
+            url: params[:url]
+        }
+
+        puts new_video
+        puts $videos
+
+        $videos.push new_video
+
+        redirect "/"
     end
 
     # Need to make index, show and new/create and use Css - bootstrap as bonus

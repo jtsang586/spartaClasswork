@@ -2,9 +2,15 @@
 <html>
     <head>
         <title><%= @title %></title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-    <%= erb(:'partials/navigation', :layout => false) %>
-        <%= yield %>
+        <div class="col">
+            <%= erb(:'partials/navigation', :layout => false) %>
+            <div class="row">
+                <div class="col-md-6"></div>
+                <%= yield %>
+            </div>
+        </div>
     </body>
 </html>
