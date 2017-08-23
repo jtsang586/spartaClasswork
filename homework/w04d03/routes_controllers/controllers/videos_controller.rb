@@ -1,5 +1,22 @@
 class VideosController < Sinatra::Base
 
+    $videos = [{
+            id: 0,
+            title: 'Monster Hunter World'
+            url:
+        },
+        {
+            id: 1,
+            title: 'Dragon Ball Fighterz'
+            url:
+        },
+        {
+            id: 2,
+            title: 'Age of Empire 4'
+            url:
+        }
+    ]
+
     set :root, File.join(File.dirname(__FILE__), '..')
 
     set :views, Proc.new{File.join(root, 'views') }
@@ -11,6 +28,8 @@ class VideosController < Sinatra::Base
     get '/' do 
 
         "index"
+
+        @videos = $videos
 
         # erb :'videos/index'
 
