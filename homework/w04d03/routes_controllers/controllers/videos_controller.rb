@@ -75,6 +75,10 @@ class VideosController < Sinatra::Base
 
     # Need to make index, show and new/create and use Css - bootstrap as bonus
 
+    get '/:id/edit' do 
+        "EDIT"
+    end
+
 
 
 end
