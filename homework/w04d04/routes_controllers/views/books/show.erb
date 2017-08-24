@@ -1,4 +1,15 @@
 <title><%= @book[:id] %></title>
-<h1><%= @book[:title] %></h1>
-<p><%= @book[:author] %></p>
+<div class="container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h1><%= @book[:title] %></h1>
+        <p><%= @book[:author] %></p>
+        <p><%= @book[:blurb] %></p>
+    </div>
+    <div class="col-md-4"></div>
+</div>
 <a href="/<%= @book[:id] %>/edit">Edit</a>
+<form action="/<%= @book[:id] %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" name="name" value="Delete">
+</form>
