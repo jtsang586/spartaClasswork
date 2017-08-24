@@ -1,0 +1,6 @@
+<% @books.each do |book| %>
+    <div>
+        <h3><a href="/<%= book[:id] %>"><%= book[:title] %></a></h3>
+        <p><%= book[:author] %></p>
+    </div>
+<% end %>

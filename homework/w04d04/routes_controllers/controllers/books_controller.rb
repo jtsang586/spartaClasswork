@@ -2,20 +2,19 @@ class BooksController < Sinatra::Base
 
     $books = [{
             id: 0,
-            title: "Harry Potter"
+            title: "Harry Potter",
             author: "JK Rowling"
         },
         {
             id: 1,
             title: "Android's Dream",
-            author: "John Scalzi",
+            author: "John Scalzi"
         },
         {
             id: 3,
             title: "The Bell Jar",
             author: "Sylvia Plath"
-        }
-    ]
+        }]
 
     set :root, File.join(File.dirname(__FILE__), '..')
 
@@ -29,46 +28,84 @@ class BooksController < Sinatra::Base
 
         @books = $books
 
-        # erb :'books/index'
+        "INDEX"
+
+        erb :'books/index'
 
     end
 
-    get '/new' do
+    # get '/new' do
 
-        "NEW"
-        @book = {
-            id: "",
-            title: "",
-            author:""
-        }
+    #     "NEW"
+    #     @book = {
+    #         id: "",
+    #         title: "",
+    #         author:""
+    #     }
 
-        # erb :'books/new'
+    #     # erb :'books/new'
 
-    end
+    # end
 
-    get ':/id' do 
+    get '/:id' do 
 
         id = params[:id].to_i
 
         @book = $books[id]
 
-        # erb :'books/show'
+        erb :'books/show'
 
     end
 
-    post '/' do 
+    # post '/' do 
 
-        id = $books.length
+    #     id = $books.length
 
-        new_book = {
-            id: id,
-            title: params[:title],
-            author: params[:author]
-        }
+    #     new_book = {
+    #         id: id,
+    #         title: params[:title],
+    #         author: params[:author]
+    #     }
 
-        $books.push new_book
+    #     $books.push new_book
 
-        redirect "/"
+    #     redirect "/"
 
-    end
+    # end
+
+    # put '/:id' do 
+
+    #     id = params[:id].to_i
+
+    #     book = $books[id]
+
+    #     book[:title] = params[:title]
+
+    #     book[:author] = params[:author]
+
+    #     $books[id] = book;
+
+    #     redirect '/'
+
+    # end
+
+    # delete '/:id' do 
+
+    #     id = params[:id].to_i
+
+    #     $books.delete_at(id)
+
+    #     redirect "/"
+
+    # end
+
+
+    # get '/:id/edit' do 
+
+    #     id = params[:id].to_i
+
+    #     @book = $books[id]
+
+    #     # erb :'books/edit'
+    # end
 end
