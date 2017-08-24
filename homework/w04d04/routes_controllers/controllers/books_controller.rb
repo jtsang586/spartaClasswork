@@ -57,37 +57,37 @@ class BooksController < Sinatra::Base
 
     end
 
-    # post '/' do 
+    post '/' do 
 
-    #     id = $books.length
+        id = $books.length
 
-    #     new_book = {
-    #         id: id,
-    #         title: params[:title],
-    #         author: params[:author]
-    #     }
+        new_book = {
+            id: id,
+            title: params[:title],
+            author: params[:author]
+        }
 
-    #     $books.push new_book
+        $books.push new_book
 
-    #     redirect "/"
+        redirect "/"
 
-    # end
+    end
 
-    # put '/:id' do 
+    put '/:id' do 
 
-    #     id = params[:id].to_i
+        id = params[:id].to_i
 
-    #     book = $books[id]
+        book = $books[id]
 
-    #     book[:title] = params[:title]
+        book[:title] = params[:title]
 
-    #     book[:author] = params[:author]
+        book[:author] = params[:author]
 
-    #     $books[id] = book;
+        $books[id] = book;
 
-    #     redirect '/'
+        redirect '/'
 
-    # end
+    end
 
     # delete '/:id' do 
 
@@ -100,12 +100,12 @@ class BooksController < Sinatra::Base
     # end
 
 
-    # get '/:id/edit' do 
+    get '/:id/edit' do 
 
-    #     id = params[:id].to_i
+        id = params[:id].to_i
 
-    #     @book = $books[id]
+        @book = $books[id]
 
-    #     # erb :'books/edit'
-    # end
+        erb :'books/edit'
+    end
 end
