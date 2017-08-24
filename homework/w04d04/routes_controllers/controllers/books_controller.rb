@@ -34,18 +34,18 @@ class BooksController < Sinatra::Base
 
     end
 
-    # get '/new' do
+    get '/new' do
 
-    #     "NEW"
-    #     @book = {
-    #         id: "",
-    #         title: "",
-    #         author:""
-    #     }
+        "NEW"
+        @book = {
+            id: "",
+            title: "",
+            author:""
+        }
 
-    #     # erb :'books/new'
+        erb :'books/new'
 
-    # end
+    end
 
     get '/:id' do 
 
