@@ -12,6 +12,30 @@ class MonstersController < Sinatra::Base
 		"Index"
 	end
 
+	get '/new' do 
+		"NEW"
+	end
 
+	get '/:id' do 
+		"Show"
+	end
+
+	post '/' do 
+		"create"
+	end
+
+	put '/:id' do 
+		"update"
+	end
+
+	delete '/:id' do 
+		"delete"
+	end
+
+	get '/:id/edit' do 
+		"edit"
+	end
+
+ 
 
 end
