@@ -9,7 +9,12 @@ class MonstersController < Sinatra::Base
 	end
 
 	get '/' do
-		"Index"
+
+		@title = "Monster entries"
+
+		@monsters = Monster.all 
+
+		erb :'monsters/index'
 	end
 
 	get '/new' do 
@@ -18,6 +23,11 @@ class MonstersController < Sinatra::Base
 
 	get '/:id' do 
 		"Show"
+		id = params[:id].to_i
+
+		@monster = Monster.find id
+
+		erb :'monsters/show'
 	end
 
 	post '/' do 

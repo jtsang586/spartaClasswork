@@ -1,0 +1,7 @@
+<h1><%= @monster.title %></h1>
+<p><%= @monster.description %></p>
+<a href="/<%= @monster.id %>/edit ">edit</a>
+<form action="/<%= @monster.id %>" method ="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<input type="submit" name="Delete">
+</form>

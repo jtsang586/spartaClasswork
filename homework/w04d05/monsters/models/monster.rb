@@ -24,7 +24,7 @@ class Monster
 			self.hydrate result
 		end
 
-		monster
+		monsters
 	end
 
 	def self.find id 

@@ -1,0 +1,8 @@
+<h1>Welcome to the homepage</h1>
+
+<% @monsters.each do |monster| %>
+<div>
+	<h3><a href="/<%= monster.id %> "><%= monster.title %></a></h3>
+	<p><%= monster.description%></p>
+</div>
+<% end %>
