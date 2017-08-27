@@ -51,7 +51,7 @@ class Monster
 	def self.destroy id
 		conn = self.open_connection
 
-		sql = "DELETE FROM post WHERE id = #{id}"
+		sql = "DELETE FROM monster WHERE id = #{id}"
 
 		conn.exec(sql)
 	end

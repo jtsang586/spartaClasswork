@@ -18,7 +18,12 @@ class MonstersController < Sinatra::Base
 	end
 
 	get '/new' do 
-		"NEW"
+		@monster = Monster.new
+		@monster.id = ""
+		@monster.title = ""
+		@monster.description = ""
+
+		erb :'monsters/new'
 	end
 
 	get '/:id' do 
@@ -31,21 +36,43 @@ class MonstersController < Sinatra::Base
 	end
 
 	post '/' do 
-		"create"
+		monster = Monster.new
+		monster.title = params[:title]
+		monster.description = params[:description]
+
+		monster.save
+
+		redirect "/"
 	end
 
 	put '/:id' do 
-		"update"
+
+		id = params[:id].to_i
+		monster = Monster.find id
+
+		monster.title = params[:title]
+		monster.description = params[:description]
+
+		monster.save
+
+		redirect '/'
 	end
 
 	delete '/:id' do 
-		"delete"
+		
+		id = params[:id].to_i
+
+		Monster.destroy id
+
+		redirect '/'
 	end
 
 	get '/:id/edit' do 
-		"edit"
+		
+		id = params[:id].to_i
+
+		@monster = Monster.find id
+
+		erb :'monsters/edit'
 	end
-
- 
-
 end
