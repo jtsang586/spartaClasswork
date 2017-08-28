@@ -9,9 +9,11 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<%= erb(:'partials/navigation', :layout => false) %>
+		<div class="container">
+			<%= erb(:'partials/navigation', :layout => false) %>
 
-		<%= yield %>
+			<%= yield %>	
+		</div>
 
 	</body>
 </html>
