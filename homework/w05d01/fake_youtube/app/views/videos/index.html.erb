@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Videos</h1>
+<h1>Fake Youtube</h1>
 
 <table>
   <thead>
@@ -17,7 +17,8 @@
       <tr>
         <td><%= video.title %></td>
         <td><%= video.description %></td>
-        <td><%= video.url %></td>
+        <td><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allowfullscreen></iframe></td>
+        <!-- <td><%= video.url %></td> -->
         <td><%= link_to 'Show', video %></td>
         <td><%= link_to 'Edit', edit_video_path(video) %></td>
         <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
