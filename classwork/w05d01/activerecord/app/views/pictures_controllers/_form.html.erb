@@ -1,0 +1,42 @@
+<%= form_with(model: pictures_controller, local: true) do |form| %>
+  <% if pictures_controller.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pictures_controller.errors.count, "error") %> prohibited this pictures_controller from being saved:</h2>
+
+      <ul>
+      <% pictures_controller.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :pictures_controller_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :pictures_controller_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artist %>
+    <%= form.text_field :artist, id: :pictures_controller_artist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :string %>
+    <%= form.text_field :string, id: :pictures_controller_string %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_area :url, id: :pictures_controller_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
