@@ -1,0 +1,22 @@
+<title><%= @monster.id %></title>
+<div class="row show">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<h1 class="name"><%= @monster.title %></h1>
+		<p><%= @monster.description %></p>
+	</div>
+	<div class="col-md-1"></div>
+</div>
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-2">
+		<a href="/<%= @monster.id %>/edit " class="edit">edit</a>
+	</div>
+	<div class="col-md-4"></div>
+	<div class="col-md-2">
+		<form action="/<%= @monster.id %>" method ="POST">
+			<input type="hidden" name="_method" value="DELETE">
+			<input type="submit" name="name" value="Delete">
+		</form>
+	</div>
+</div>

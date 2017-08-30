@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pictures_controller.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pictures_controller.description %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @pictures_controller.artist %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @pictures_controller.string %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= image_tag @pictures_controller.url %>
+</p>
+
+<%= link_to 'Edit', edit_pictures_controller_path(@pictures_controller) %> |
+<%= link_to 'Back', pictures_controllers_path %>
