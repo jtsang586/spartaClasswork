@@ -17,5 +17,7 @@ books = Book.create ([
     {title: "Harry Potter: Philosopher's stone", author_name:'JK Rowling', author_id:4},
     {title: "The Hobbit", author_name:'J R R Tolkien', author_id:5},
     {title: "The Fellowship of the Ring", author_name:'J R R Tolkien', author_id:5},
-    {title: "Guards, Guards, Guards", author_name:'Terry Pratchett', author_id:2}
+    {title: "Guards, Guards, Guards", author_name:'Terry Pratchett', author_id:2},
+    {title:"2010: Odyssey Two", author_name:"", author_id:3},
+    {title:"Night Watch", author_name:"", author_id:2}
 ])
