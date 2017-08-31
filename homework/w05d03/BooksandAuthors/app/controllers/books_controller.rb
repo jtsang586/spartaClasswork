@@ -19,7 +19,7 @@ class BooksController < ApplicationController
 
   # GET /books/1/edit
   def edit
-    @authors = Author.all
+    @authors = current_user
   end
 
   # POST /books
