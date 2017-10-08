@@ -1,0 +1,26 @@
+<nav class="row navigation">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <a class="navbar-brand" href="/">Home</a>
+        <% if user_signed_in? %>
+        <a class="navbar-brand" href="<%= edit_user_registration_path %>">Edit Profile</a>
+        <a class="navbar-brand" href="<%= users_path %>">User Posts</a>
+        <a class="navbar-brand" href="<%= posts_path %>">All Posts</a>
+        <div class="col-md-1"></div>
+        <a class="navbar-brand" >Logged in as <%= current_user.name %></a>
+        <div class="col-md-3"></div>
+        <a class="navbar-brand" <%= link_to 'Logout', destroy_user_session_path, method: :delete %><span class="sr-only">(current)</span></a>
+
+    <% else %>
+        <a class="navbar-brand" href="<%= new_user_registration_path %>">Sign Up</a>
+        <div class="col-md-8"></div>
+        <a class="navbar-brand" href="<%= new_user_session_path %>">Login</a>
+    </nav>
+    <div class="row">
+    <div class= "col-md-3"></div>
+        <div class="col-md-2"></div>
+         <p>
+            You are not logged in
+        </p>
+    </div>
+    <% end %>
+</nav>
