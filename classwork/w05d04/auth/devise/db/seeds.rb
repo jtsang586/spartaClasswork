@@ -5,14 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+user = User.create([
+    {email: 'bob@bob.com', name:'bob', password:'bobbob'},
+    {email: 'bob1@bob.com', name:'bob1', password:'bobbob'}
+])
 
 post = Post.create([
     {title:'Haha', content:'Hahahahahahahahah', user_id:1},
     {title:'dsjdadasda', content:'dsdafsafasfsaidsa', user_id:1},
     {title:'dsaghdi hds', content:'hifudsfhsidufhsdifs', user_id:2}
-])
-
-user = User.create([
-    {email: 'bob@bob.com', name:'bob', password:'bobbob'},
-    {email: 'bob1@bob.com', name:'bob1', password:'bobbob'}
 ])
